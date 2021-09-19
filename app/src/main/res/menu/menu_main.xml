@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_buscar"
+        android:icon="@drawable/ic_buscar_white"
+        android:title="Buscar"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_atualizar"
+        android:icon="@drawable/ic_atualizar_white"
+        android:title="Atualizar"
+        app:showAsAction="ifRoom" /> <!-- Se tiver espaço mostra o icon, se não oculta-->
+
+    <item android:id="@+id/action_config"
+        android:icon="@drawable/ic_configuracoes_white"
+        android:title="Configurações"
+        app:showAsAction="never" />
+
+    <!-- Criar mais um item de menu capa configurações showAsAction="never"-->
+</menu>
