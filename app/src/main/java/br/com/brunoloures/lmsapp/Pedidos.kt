@@ -9,7 +9,7 @@ class Pedidos : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pedidos)
-        supportActionBar?.title = "Pedidos"
+        supportActionBar?.title = "PEDIDOS"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/action_buscar"
-        android:icon="@drawable/ic_buscar_white"
+    <item android:id="@+id/action_add"
+        android:icon="@drawable/ic_adicionar_white"
         android:title="Buscar"
         app:showAsAction="always" />
 

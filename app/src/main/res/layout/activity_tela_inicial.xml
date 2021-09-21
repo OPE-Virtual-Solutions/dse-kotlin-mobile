@@ -15,21 +15,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Novo Pedido"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/botao_pedidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="pedidos"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/botao_perfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="perfil"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"/>
 
     <ProgressBar
         android:id="@+id/progressBar"

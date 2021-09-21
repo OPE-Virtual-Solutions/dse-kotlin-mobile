@@ -58,8 +58,9 @@ class telaInicialActivity : DebugActivity  () {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
 
-        if (id == R.id.action_buscar) {
-            Toast.makeText(this, "Botão de Buscar", Toast.LENGTH_SHORT).show()
+        if (id == R.id.action_add) {
+            var intent = Intent(this, Adicionar::class.java)
+            startActivity(intent)
         } else if (id == R.id.action_atualizar) {
             progressBar.max = 1000
             progressBar.visibility = View.VISIBLE

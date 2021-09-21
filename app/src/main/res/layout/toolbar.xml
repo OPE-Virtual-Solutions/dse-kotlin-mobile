@@ -7,6 +7,6 @@
     android:background="?attr/colorSecondary"
     android:minHeight="?attr/actionBarSize"
     android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-    >
+    android:textSize="20dp">
 
 </androidx.appcompat.widget.Toolbar>

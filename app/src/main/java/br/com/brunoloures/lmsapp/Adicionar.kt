@@ -5,12 +5,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 
-class NovoPedido : AppCompatActivity() {
+class Adicionar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_novo_pedido)
-
-        supportActionBar?.title = "NOVO PEDIDO"
+        setContentView(R.layout.activity_adicionar)
+        supportActionBar?.title = "ADICIONAR"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

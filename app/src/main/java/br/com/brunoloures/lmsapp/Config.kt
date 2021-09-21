@@ -12,7 +12,7 @@ class Config : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_config)
-        supportActionBar?.title = "Configurações"
+        supportActionBar?.title = "CONFIGURAÇÕES"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

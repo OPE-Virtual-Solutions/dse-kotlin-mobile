@@ -9,7 +9,7 @@ class Perfil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
-        supportActionBar?.title = "Perfil"
+        supportActionBar?.title = "PERFIL"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
