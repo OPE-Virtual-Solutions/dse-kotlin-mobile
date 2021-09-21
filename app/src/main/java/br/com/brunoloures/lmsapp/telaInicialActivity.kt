@@ -27,9 +27,23 @@ class telaInicialActivity : DebugActivity  () {
         progressBar.visibility = View.GONE
 
         var btnPedidos = findViewById<Button>(R.id.botao_pedidos);
+        var btnNovoPedido = findViewById<Button>(R.id.botao_novo_pedido);
+        var btnPerfil = findViewById<Button>(R.id.botao_perfil);
 
         btnPedidos.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "Pedidos", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this, Pedidos::class.java)
+            startActivity(intent)
+        })
+
+        btnNovoPedido.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this, "Novo Pedidos", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this, NovoPedido::class.java)
+            startActivity(intent)
+        })
+
+        btnPerfil.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
             var intent = Intent(this, Pedidos::class.java)
             startActivity(intent)
         })
