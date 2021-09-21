@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+
         var credenciais = Usuario("aluno", "impacta");
         var inputEmail = findViewById<EditText>(R.id.campo_usuario);
         var inputSenha = findViewById<EditText>(R.id.campo_senha);
@@ -42,7 +43,6 @@ class MainActivity : AppCompatActivity() {
     private fun exibirMensagemDeErro() {
         Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_LONG).show();
     }
-
 
     private fun exibirMensagemDeSucesso() {
         Toast.makeText(this, "Login efetuado com sucesso", Toast.LENGTH_LONG).show();

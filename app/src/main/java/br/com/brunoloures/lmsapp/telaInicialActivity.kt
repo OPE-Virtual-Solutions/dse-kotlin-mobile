@@ -1,28 +1,39 @@
 package br.com.brunoloures.lmsapp
 
+import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
-import kotlinx.android.synthetic.main.tela_inicial.*
+import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.toolbar.*
 
+
 class telaInicialActivity : DebugActivity  () {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tela_inicial)
-
-        val args = intent.extras
-//        val nome_pessoa = args?.getString("nome_pessoa")
-//        Toast.makeText(this, "parametro 1: BrunoLoures", Toast.LENGTH_LONG).show()
-        val nome_usuario = args?.getString("nome_usuario")
-        campo_texto_exercio.text = nome_usuario
+        setContentView(R.layout.activity_tela_inicial)
 
         setSupportActionBar(toolbar)
 
-        supportActionBar?.title = "Leadro Lanches"
-
+        supportActionBar?.title = "Leandro Lanches"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        progressBar.visibility = View.GONE
+
+        var btnPedidos = findViewById<Button>(R.id.botao_pedidos);
+
+        btnPedidos.setOnClickListener(View.OnClickListener {
+            Toast.makeText(this, "Pedidos", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this, Pedidos::class.java)
+            startActivity(intent)
+        })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,16 +45,29 @@ class telaInicialActivity : DebugActivity  () {
         val id = item.itemId
 
         if (id == R.id.action_buscar) {
-            // IMPLEMENTAR A LÓGICA NECESSÁRIA PARA TRATAMANTO DE EVENTO DO ITEM DE MENU
             Toast.makeText(this, "Botão de Buscar", Toast.LENGTH_SHORT).show()
         } else if (id == R.id.action_atualizar) {
-            Toast.makeText(this, "Botão de Atualizar", Toast.LENGTH_SHORT).show()
+            progressBar.max = 1000
+            progressBar.visibility = View.VISIBLE
+            val currentProgress = 1000
+
+            ObjectAnimator.ofInt(progressBar, "progress", currentProgress)
+                .setDuration(1000)
+                .start()
+            if(progressBar.max < 100){
+                progressBar.visibility = View.GONE
+            }
+
         } else if (id == R.id.action_config) {
-            Toast.makeText(this, "Botão de Configuração", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Configuração", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this, Config::class.java)
+            startActivity(intent)
+
         } else if (id == android.R.id.home)
             finish()
 
         return super.onOptionsItemSelected(item)
-
     }
+
+
 }

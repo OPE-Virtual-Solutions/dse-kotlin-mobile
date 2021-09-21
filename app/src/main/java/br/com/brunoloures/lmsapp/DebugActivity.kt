@@ -9,7 +9,7 @@ open class DebugActivity : AppCompatActivity() {
     private val className: String
         get(){
             val s = javaClass.name
-            return s
+            return s.substring(s.lastIndexOf("."))
         }
 
     private val TAG = "LMSApp"
@@ -20,9 +20,9 @@ open class DebugActivity : AppCompatActivity() {
 
     }
 
-    fun OnStart(){
+    override fun onStart() {
         super.onStart()
-        Log.d(TAG,"${className}.OnStart chamado" )
+        Log.d(TAG, "${className}.onStart chamado")
     }
 
 

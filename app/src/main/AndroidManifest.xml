@@ -10,11 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LMSApp">
         <activity
-            android:name=".telaInicialActivity" android:theme="@style/AppTheme.Toolbar"
+            android:name=".Perfil"
             android:exported="true" />
         <activity
-            android:name=".DebugActivity"
+            android:name=".NovoPedido"
             android:exported="true" />
+        <activity
+            android:name=".Pedidos"
+            android:exported="true" />
+        <activity
+            android:name=".Config"
+            android:exported="true" />
+        <activity
+            android:name=".telaInicialActivity"
+            android:theme="@style/AppTheme.Toolbar" />
+        <activity android:name=".DebugActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -10,7 +10,21 @@
         <entry key="..\:/Android/LMSApp/app/src/main/res/layout/tela_inicial.xml" value="0.1" />
         <entry key="..\:/Android/LMSApp/app/src/main/res/layout/toolbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/LMSApp/app/src/main/res/menu/menu_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_config.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_novo_pedido.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_pedidos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_perfil.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/activity_tela_inicial.xml" value="0.33" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/novo_pedido.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/pedidos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/perfil.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/tela_inicial.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/layout/toolbar.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/menu/menu_config.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/LeandroLanches/app/src/main/res/menu/menu_main.xml" value="0.27291666666666664" />
       </map>
     </option>
   </component>

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/faca_login"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:text="Faça seu Login"
-        android:textSize="18dp"
-        />
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/usuario"
@@ -26,7 +24,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Coloque Seu Usuário" />
+        android:hint="Usuário" />
 
     <TextView
         android:id="@+id/senha"
@@ -39,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Coloque Sua Senha" />
+        android:hint="Senha" />
 
     <Button
         android:id="@+id/botao_login"
@@ -48,8 +46,11 @@
         android:text="Login" />
 
     <ImageView
-        android:id="@+id/testeaula24"
+        android:id="@+id/logo"
         android:layout_width="match_parent"
-        android:layout_height="344dp" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/leandro_prensados" />
+
+
 
 </LinearLayout>
