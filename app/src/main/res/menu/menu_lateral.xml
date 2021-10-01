@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item
+      android:id="@+id/nav_disciplina"
+      android:icon="@drawable/ic_disciplina_black"
+      android:title="Disciplinas"
+      android:checked="true"
+        />
+    <item
+        android:id="@+id/nav_forum"
+        android:icon="@drawable/ic_forum_black"
+        android:title="Forum"
+        android:checked="true"
+        />
+    <item
+        android:id="@+id/nav_localizacao"
+        android:icon="@drawable/ic_adicionar_black"
+        android:title="Localizar"
+        android:checked="true"
+        />
+    <item
+        android:id="@+id/nav_sair"
+        android:icon="@drawable/sair"
+        android:title="Sair"
+        android:checked="true"
+        />
+</group>
+</menu>

@@ -2,4 +2,6 @@
     <string name="app_name">Leandro Prensados</string>
     <string name="mensagem_inicial">Faça Seu Login</string>
     <string name="mensagem_sucess">Login realizado com sucesso</string>
+    <string name="abrir">Abrir</string>
+    <string name="fechar">Fechar</string>
 </resources>
