@@ -23,6 +23,7 @@ class telaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_tela_inicial)
 
         setSupportActionBar(toolbar)

@@ -16,7 +16,10 @@
     android:orientation="vertical"
     tools:context=".telaInicialActivity">
 
+
+
     <include layout="@layout/toolbar" />
+
 
     <Button
         android:id="@+id/botao_novo_pedido"
