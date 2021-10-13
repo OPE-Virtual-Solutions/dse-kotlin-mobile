@@ -40,7 +40,7 @@ class NovoPedido : DebugActivity(), NavigationView.OnNavigationItemSelectedListe
         recyclerDisciplinas?.adapter = DisciplinaAdapter(disciplinas) {onClickDisciplina(it)}
     }
     fun onClickDisciplina(disciplina: Disciplina) {
-        Toast.makeText(context, "Clicou disciplina ${disciplina.nome}", Toast.LENGTH_SHORT)
+        Toast.makeText(context, "Clicou no pedido ${disciplina.nome}", Toast.LENGTH_SHORT)
             .show()
     }
 

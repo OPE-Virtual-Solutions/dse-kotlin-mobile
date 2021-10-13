@@ -3,8 +3,8 @@
 <group>
     <item
       android:id="@+id/nav_disciplina"
-      android:icon="@drawable/ic_disciplina_black"
-      android:title="Disciplinas"
+      android:icon="@drawable/pedido_online"
+      android:title="Pedidos"
       android:checked="true"
         />
     <item

@@ -8,10 +8,10 @@ object DisciplinaService {
 // criar 10 disciplinas
         for (i in 1..10) {
             val d = Disciplina()
-            d.nome = "Teste $i"
+            d.nome = "Pedido $i"
             d.ementa = "Ementa Disciplina $i"
             d.professor = "Professor Disciplina $i"
-            d.foto = "http://s2.glbimg.com/VD9XgaIKvSsGQCXNttt1lZHHY9o=/695x0/s.glbimg.com/po/tt2/f/original/2015/09/28/android.jpg"
+            d.foto = "http://f.i.uol.com.br/folha/comida/images/10272699.jpeg"
             disciplinas.add(d)
         }
         return disciplinas
