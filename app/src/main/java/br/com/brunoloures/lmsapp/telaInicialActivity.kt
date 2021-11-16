@@ -119,7 +119,9 @@ class telaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_disciplina -> {
-                Toast.makeText(this, "Disciplinas", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Pedidos", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, Pedidos::class.java)
+                startActivity(intent)
             }
 
             R.id.nav_sair -> {

@@ -70,7 +70,7 @@ object DisciplinaService {
     }
 
     fun save(disciplina: Disciplina){
-        if(AndroidUtils.isInternetDisponivel(LMSApplication.getInstance().applicationContext)) {
+        if(isOnline(LMSApplication.getInstance().applicationContext) == true) {
             val json = HttpHelper.post("$host/api/v2/pedidos/?format=json", disciplina.toJson())
             Log.d(TAG, "deu certo com internet")
 
