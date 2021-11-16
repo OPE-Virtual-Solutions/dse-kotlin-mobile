@@ -3,12 +3,11 @@ package br.com.brunoloures.lmsapp
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import java.lang.Exception
+import okhttp3.Response
 
 
 object DisciplinaService {
@@ -70,13 +69,24 @@ object DisciplinaService {
 
     }
 
-    fun saveDisciplina(disciplina: Disciplina) {
-        val url = "$host/api/v2/pedidos/?format=json"
-        var json = HttpHelper.post(url, GsonBuilder().create().toJson(disciplina))
+    fun save(disciplina: Disciplina){
+        if(AndroidUtils.isInternetDisponivel(LMSApplication.getInstance().applicationContext)) {
+            val json = HttpHelper.post("$host/api/v2/pedidos/?format=json", disciplina.toJson())
+            Log.d(TAG, "deu certo com internet")
+
+        }
+        Log.d(TAG, "entrei no if")
+        val dao = DatabaseManager.getDisciplinaDAO()
+        val disciplinas = dao.insert(disciplina)
+        Log.d(TAG, "deu certo sem internet")
     }
 
     inline fun <reified T> parseJson(json: String): T {
         val type = object : TypeToken<T>() {}.type
         return Gson().fromJson<T>(json, type)
+    }
+
+    fun toJson(): String {
+        return GsonBuilder().create().toJson(this)
     }
 }

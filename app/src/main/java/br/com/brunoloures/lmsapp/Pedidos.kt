@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_novo_pedido.*
+import kotlinx.android.synthetic.main.activity_pedidos.*
 
 class Pedidos : DebugActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -19,7 +20,7 @@ class Pedidos : DebugActivity(), NavigationView.OnNavigationItemSelectedListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_novo_pedido)
+        setContentView(R.layout.activity_pedidos)
 
         recyclerDisciplinas?.layoutManager = LinearLayoutManager(context)
         recyclerDisciplinas?.itemAnimator = DefaultItemAnimator()

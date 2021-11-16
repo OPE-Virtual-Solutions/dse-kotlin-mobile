@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
         <!-- Colocar cardview com as disciplinas-->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerDisciplinas2"
+            android:id="@+id/recyclerDisciplinas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cacheColorHint="@android:color/transparent"

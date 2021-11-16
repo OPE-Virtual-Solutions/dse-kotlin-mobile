@@ -1,17 +1,10 @@
 package br.com.brunoloures.lmsapp
 
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_novo_pedido.*
+import kotlinx.android.synthetic.main.login.*
 
 class NovoPedido : DebugActivity()  {
 
@@ -20,6 +13,36 @@ class NovoPedido : DebugActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_novo_pedido)
+
+        button.setOnClickListener(View.OnClickListener {
+           var foto = "https://conteudo.imguol.com.br/c/entretenimento/8c/2018/04/18/fast-food-lanche-1524056858988_v2_450x450.jpg"
+           var preco = editTextTextPersonName4.text.toString()
+           var nome = editTextTextPersonName2.text.toString()
+           var produto = editTextTextPersonName3.text.toString()
+
+//            val rootObject= JSONObject()
+//            rootObject.put("foto", foto)
+//            rootObject.put("preco", preco)
+//            rootObject.put("nome", nome)
+//            rootObject.put("produto", produto)
+
+            val disciplina = Disciplina()
+            disciplina.foto="https://conteudo.imguol.com.br/c/entretenimento/8c/2018/04/18/fast-food-lanche-1524056858988_v2_450x450.jpg"
+            disciplina.preco = preco
+            disciplina.nome = nome
+            disciplina.produto = produto
+            taskAtualizar(disciplina)
+        })
+    }
+
+    fun taskAtualizar(disciplina: Disciplina) {
+        Thread {
+            DisciplinaService.save(disciplina)
+            runOnUiThread {
+                finish()
+            }
+        }.start()
+
 
     }
 }

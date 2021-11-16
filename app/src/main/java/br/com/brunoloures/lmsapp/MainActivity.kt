@@ -51,12 +51,16 @@ class MainActivity : AppCompatActivity() {
             Thread {
                 login = LoginService.getLogin(this)
                 runOnUiThread {
-                    for(nome in login){
-                        if(nome.fullName == campo_usuario.text.toString() && nome.password == campo_senha.text.toString()) {
-                            cont = 1
-                            exibirMensagemDeSucesso();
-                            Log.d("SUCESSO DO IF", "Entrou no if")
+                    for(nome in login) {
+                        if (AndroidUtils.isInternetDisponivel(LMSApplication.getInstance().applicationContext)) {
+
+                            if (nome.fullName == campo_usuario.text.toString() && nome.password == campo_senha.text.toString()) {
+                                cont = 1
+                                exibirMensagemDeSucesso();
+                                Log.d("SUCESSO DO IF", "Entrou no if")
+                            }
                         }
+
                     }
                     if(cont != 1){
                         exibirMensagemDeErro()
