@@ -1,13 +1,18 @@
 package br.com.brunoloures.lmsapp
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
+@Entity(tableName = "pedidos")
 class Disciplina: Serializable {
-    var id:Long = 0
+
+    @PrimaryKey
+    var id:Long? = null
     var nome = ""
-    var ementa = ""
+    var produto = ""
     var foto = ""
-    var professor = ""
+    var preco = ""
 
     override fun toString(): String {
         return "Teste(nome='$nome')"
