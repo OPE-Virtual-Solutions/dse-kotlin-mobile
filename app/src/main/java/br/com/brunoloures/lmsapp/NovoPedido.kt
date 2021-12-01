@@ -1,6 +1,7 @@
 package br.com.brunoloures.lmsapp
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_novo_pedido.*
@@ -39,10 +40,17 @@ class NovoPedido : DebugActivity()  {
         Thread {
             DisciplinaService.save(disciplina)
             runOnUiThread {
+                enviaNotificacao(disciplina)
                 finish()
             }
         }.start()
 
 
+    }
+
+    fun enviaNotificacao(disciplina: Disciplina){
+        val intent = Intent(this, Pedidos::class.java)
+        intent.putExtra("disciplina", disciplina)
+        NotificationUtil.create(context, 1, intent, "LMSApp", "Cadastro do pedido de ${disciplina.nome} realizado com sucesso!")
     }
 }

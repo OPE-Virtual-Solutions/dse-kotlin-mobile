@@ -42,8 +42,15 @@ class Pedidos : DebugActivity(), NavigationView.OnNavigationItemSelectedListener
             runOnUiThread {
                 recyclerDisciplinas?.adapter =
                     DisciplinaAdapter(disciplinas) { onClickDisciplina(it) }
+                enviaNotificacao(this.disciplinas.get(0))
             }
         }.start()
+    }
+
+    fun enviaNotificacao(disciplina: Disciplina){
+        val intent = Intent(this, Pedidos::class.java)
+        intent.putExtra("disciplina", disciplina)
+        NotificationUtil.create(context, 1, intent, "LMSApp", "Você tem nova atividade na ${disciplina.nome}")
     }
 
     fun onClickDisciplina(disciplina: Disciplina) {

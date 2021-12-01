@@ -4,4 +4,7 @@
     <string name="mensagem_sucess">Login realizado com sucesso</string>
     <string name="abrir">Abrir</string>
     <string name="fechar">Fechar</string>
+    <string name="API_KEY">AIzaSyCKHgude1jPBcKRdjIDcqWzfhJoegE8Gro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

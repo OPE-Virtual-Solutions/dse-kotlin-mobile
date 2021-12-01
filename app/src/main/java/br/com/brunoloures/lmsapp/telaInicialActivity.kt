@@ -124,6 +124,12 @@ class telaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
                 startActivity(intent)
             }
 
+            R.id.nav_localizacao -> {
+                Toast.makeText(this, "Localização", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, MapasActivity::class.java)
+                startActivity(intent)
+            }
+
             R.id.nav_sair -> {
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Sair do aplicativo.")
